@@ -1,0 +1,85 @@
+ /* Адаптивные стили для экранов шириной до 600px */
+@media only screen and (max-width: 600px) {
+
+    /* Изменяем размеры контейнера */
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Стили для хедера */
+    .header {
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Адаптивные стили для профиля */
+    .profile {
+        flex-direction: column; /* Профиль становится вертикальным */
+        align-items: center; /* Выравниваем все элементы по центру */
+        padding: 10px;
+    }
+
+    .profile .info {
+        text-align: center;
+    }
+
+    /* Фото профиля: уменьшаем размер для мобильных */
+    .profile .profile-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Стили для кнопок на мобильных устройствах */
+    .change-profile-btn, .logout-btn {
+        width: 100%; /* Кнопки на всю ширину */
+        padding: 12px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* Стили для ленты сообщений */
+    .feed {
+        max-height: 300px; /* Уменьшаем высоту ленты */
+        padding: 5px;
+    }
+
+    /* Посты: уменьшаем отступы и текст */
+    .post {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .post-header h3 {
+        font-size: 1rem;
+    }
+
+    .post-content {
+        font-size: 0.9rem;
+    }
+
+    /* Модальное окно: на мобильных экранах */
+    .modal-content {
+        width: 95%; /* Почти на всю ширину экрана */
+        padding: 10px;
+    }
+
+    .modal-input {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    /* Кнопки в модальном окне */
+    .modal-actions {
+        flex-direction: column;
+    }
+
+    .btn-submit, .btn-close {
+        width: 100%; /* Кнопки на всю ширину */
+        margin-top: 10px;
+    }
+}

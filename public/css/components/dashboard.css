@@ -1,0 +1,19 @@
+/* Общие стили для страницы */
+body {
+    background-color: #000; /* Черный фон */
+    color: white; /* Белый текст по умолчанию */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+

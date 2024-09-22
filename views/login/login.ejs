@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Войти</title>
+    <link rel="stylesheet" href="/css/login.css"> <!-- Стили формы входа -->
+    <link rel="stylesheet" href="/css/nav/nav-header.css">
+    <link rel="stylesheet" href="/css/nav/nav-bottom.css">
+    <link rel="stylesheet" href="/css/nav/nav-responsive.css">
+</head>
+<body>
+    <!-- Включаем навигацию -->
+    <%- include('../partials/nav'); %>
+
+    <div class="login-container">
+        <h1>Вход</h1>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <input type="text" id="uniqueKey" name="uniqueKey" placeholder="Введите ваш уникальный ключ" required>                
+            </div>
+            <button type="submit" class="btn">Войти</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+ 

@@ -1,0 +1,13 @@
+ /* Стили для хедера */
+.header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333; /* Темный фон для хедера */
+    color: #fff; /* Белый текст */
+    border-bottom: 2px solid #444; /* Темная рамка */
+}
+
+.header h1 {
+    margin: 0;
+    color: #fff; /* Белый цвет текста */
+}

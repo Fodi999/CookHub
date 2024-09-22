@@ -1,0 +1,79 @@
+/* Общие стили для страницы входа */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Черный фон */
+    color: #ffffff; /* Белый текст */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Контейнер для формы */
+.login-container {
+    background-color: #1a1a1a; /* Темный фон формы */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Более темная тень */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Стили формы */
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Стиль для лейбла */
+label {
+    font-size: 16px;
+    color: #999999; /* Светло-серый текст для лейбла */
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Стили для инпута */
+input {
+    padding: 12px;
+    width: 300px;
+    border: 1px solid #333333; /* Темная граница */
+    background-color: #333333; /* Темный фон для инпута */
+    color: #ffffff; /* Белый текст */
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Стили для плейсхолдера */
+input::placeholder {
+    color: #999999; /* Цвет плейсхолдера - светло-серый */
+    font-size: 14px;
+}
+
+/* Кнопка входа */
+button {
+    padding: 12px;
+    background-color: #1DA1F2; /* Синий цвет в стиле Threads */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Закругленные края кнопки */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 300px;
+}
+
+button:hover {
+    background-color: #0d8bf0; /* Более светлый синий при наведении */
+}
+
+
+ 

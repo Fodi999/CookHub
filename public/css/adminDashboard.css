@@ -1,0 +1,76 @@
+/* Контейнер для панели администратора */
+.admin-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Заголовки */
+.admin-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.admin-container h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Список пользователей */
+.users-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.users-list li {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.logout {
+    background-color: #dc3545;
+}
+
+.logout:hover {
+    background-color: #c82333;
+}
+
+/* Блок действий администратора */
+.admin-actions {
+    margin-top: 30px;
+}
+/* Блок информации о пользователях */
+.users-info {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+ 

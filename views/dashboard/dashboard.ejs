@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - <%= user.name %></title>
+    <link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#007bff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+<link rel="stylesheet" href="/css/components/_header.css">
+<link rel="stylesheet" href="/css/components/_profile.css">
+<link rel="stylesheet" href="/css/components/_feed.css">
+<link rel="stylesheet" href="/css/components/_post.css">
+<link rel="stylesheet" href="/css/components/_modal.css">
+<link rel="stylesheet" href="/css/components/_buttons.css">
+<link rel="stylesheet" href="/css/components/responsive.css">
+<link rel="stylesheet" href="/css/components/dashboard.css">
+<link rel="stylesheet" href="/css/nav/nav-header.css">
+<link rel="stylesheet" href="/css/nav/nav-bottom.css">
+<link rel="stylesheet" href="/css/nav/nav-responsive.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Включаем навигацию -->
+        <%- include('../partials/nav'); %>
+        
+        <!-- Заголовок -->
+        <div class="header">
+            <h1>Добро пожаловать, <%= user.name %>!</h1>
+        </div>
+<!-- Профиль пользователя -->
+<div class="profile">
+    <div class="info">
+        <h2>Профиль</h2>
+        <p><strong>Имя:</strong> <%= user.name.startsWith('@') ? user.name : '@' + user.name %></p>
+        <p><strong>Ключ:</strong> <%= user.uniqueKey %></p>
+        <p><strong>Ссылка:</strong> <a href="<%= user.link %>" target="_blank" class="profile-link"><%= user.link %></a></p>
+    </div>
+
+    <!-- Фото профиля -->
+    <div class="profile-image">
+        <% if (user.profileImage) { %>
+            <img src="<%= user.profileImage %>" alt="Фото профиля">
+        <% } %>
+    </div>
+</div>
+
+<!-- Кнопка "Сменить профиль" -->
+<div class="profile-actions">
+    <a href="#" class="change-profile-btn">Сменить профиль</a>
+</div>
+
+
+        <!-- Лента сообщений -->
+        <div class="feed">
+            <h2>Ваша лента сообщений</h2>
+            <% if (posts && posts.length > 0) { %>
+                <% posts.forEach(function(post) { %>
+                    <div class="post">
+                        <div class="post-header">
+                            <h3><%= post.author %></h3>
+                            <span class="date"><%= new Date(post.createdAt).toLocaleDateString() %></span>
+                        </div>
+                        <div class="post-content">
+                            <p><%= post.content %></p>
+                            <% if (post.media) { %>
+                                <img src="<%= post.media %>" alt="Изображение" class="post-image">
+                            <% } %>
+                        </div>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>Нет сообщений для отображения.</p>
+            <% } %>
+        </div>
+    </div>
+
+    <!-- Кнопка "Выйти" -->
+    <div class="logout-container">
+        <a href="/logout" class="logout-btn">Выйти</a>
+    </div>
+
+    <!-- Модальное окно для редактирования профиля -->
+    <div id="profileModal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Редактировать профиль</h2>
+            <form id="profileForm" action="/update-profile" method="POST" enctype="multipart/form-data">
+                
+                <!-- Поле для редактирования имени -->
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" value="<%= user.name %>" class="modal-input" placeholder="Введите имя">
+
+                <!-- Поле для редактирования биографии -->
+                <label for="bio">Биография:</label>
+                <textarea id="bio" name="bio" class="modal-input" placeholder="Расскажите немного о себе..."><%= user.bio || "" %></textarea>
+
+                <!-- Поле для редактирования ссылки -->
+                <label for="link">Ссылка:</label>
+                <input type="url" id="link" name="link" class="modal-input" placeholder="Введите ссылку на сайт или социальные сети" 
+                       value="<%= user.link ? user.link : '' %>">
+
+                <!-- Поле для загрузки фото профиля -->
+                <label for="profile-image">Фото профиля:</label>
+                <input type="file" id="profile-image" name="profile-image" class="modal-input">
+
+                <!-- Кнопки "Отмена" и "Готово" -->
+                <div class="modal-actions">
+                    <button type="button" class="btn-close" onclick="closeModal()">Отмена</button>
+                    <button type="submit" class="btn-submit">Готово</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Подключение dashboard.js -->
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+ 

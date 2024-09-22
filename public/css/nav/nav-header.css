@@ -1,0 +1,85 @@
+ /* Основные стили для верхней навигации */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.7); /* Прозрачность 30% */
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between; /* Логотип слева, центрированные кнопки, кнопки справа */
+    align-items: center;
+    position: fixed; /* Фиксируем хедер на экране */
+    top: 0;
+    left: 0;
+    width: 100%; /* Хедер будет занимать всю ширину экрана */
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Размытие фона за хедером */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px; /* Высота логотипа */
+    max-width: 100px; /* Максимальная ширина */
+}
+
+/* Центрируем только две кнопки (Домой и Поиск) */
+.center-nav {
+    list-style: none;
+    margin: 0 auto; /* Авто отступы слева и справа для центрирования */
+    padding: 0;
+    display: flex;
+    gap: 30px;  /* Отступы между кнопками */
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.center-nav li {
+    margin: 0;
+}
+
+.center-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Размер иконок */
+    transition: color 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.center-nav a:hover {
+    background-color: #333;
+}
+
+/* Кнопки "Вход" и "Регистрация" справа */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+}
+
+.auth-buttons .btn-auth {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+    transition: background-color 0.3s;
+}
+
+.auth-buttons .btn-auth:hover {
+    background-color: #333;
+}

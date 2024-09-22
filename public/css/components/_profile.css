@@ -1,0 +1,42 @@
+ /* Стили для блока профиля */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.profile .info {
+    flex: 1;
+}
+
+.profile .info h2 {
+    margin: 0;
+    color: #fff;
+}
+
+.profile .info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+.profile .profile-image {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile .profile-link {
+    color: #1e90ff;
+    text-decoration: none;
+}

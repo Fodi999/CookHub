@@ -1,0 +1,128 @@
+/* Общие стили для страницы регистрации */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Черный фон в стиле Threads */
+    color: #FFFFFF; /* Белый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Занимаем всю высоту экрана */
+}
+
+h1 {
+    font-size: 32px; /* Крупный заголовок */
+    color: #FFFFFF; /* Белый заголовок */
+    text-align: center; /* Центрирование текста */
+    margin-bottom: 20px;
+    width: 100%; /* Устанавливаем ширину на всю доступную область */
+}
+
+form {
+    width: 100%;
+    max-width: 400px; /* Ограничение ширины формы */
+    padding: 30px;
+    background-color: #1a1a1a; /* Темный фон формы */
+    border-radius: 12px; /* Закругленные края */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легкая тень */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Контейнер для инпута с символом @ */
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 15px;
+    padding-left: 40px; /* Отступ для символа @ */
+    background-color: #333333; /* Темный фон для полей */
+    border: none;
+    border-radius: 8px; /* Закругленные края */
+    color: #FFFFFF; /* Белый текст в полях */
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+    color: #999999; /* Цвет плейсхолдера */
+}
+
+/* Символ @ внутри инпута */
+.input-container::before {
+    content: '@';
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #1DA1F2; /* Синий цвет символа @ */
+}
+
+/* Стиль для select */
+select {
+    width: 300px;
+    padding: 15px;
+    background-color: #333333; /* Темный фон для select */
+    border: none;
+    border-radius: 8px; /* Закругленные углы */
+    color: #FFFFFF; /* Белый текст */
+    font-size: 16px;
+    box-sizing: border-box;
+    appearance: none;
+    margin-bottom: 20px;
+
+}
+
+select option {
+    background-color: #1a1a1a; /* Темный фон для выпадающих опций */
+    color: #FFFFFF; /* Белый текст */
+}
+
+button {
+    padding: 15px;
+    background-color: #1DA1F2; /* Синий цвет кнопки в стиле Threads */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px; /* Кнопка с округленными краями */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: 300px; /* Фиксированная ширина кнопки для центрирования */
+    align-self: center; /* Центрирование кнопки */
+}
+
+button:hover {
+    background-color: #0d8bf0; /* Более светлый синий при наведении */
+}
+
+/* Стили для ссылок */
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1DA1F2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+ 

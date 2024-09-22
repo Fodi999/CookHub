@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <!-- Подключение стилей через корневую папку /public -->
+    <link rel="stylesheet" href="/css/adminDashboard.css"> <!-- Из папки public/css -->
+    <link rel="stylesheet" href="/css/nav/nav-header.css">
+    <link rel="stylesheet" href="/css/nav/nav-bottom.css">
+    <link rel="stylesheet" href="/css/nav/nav-responsive.css">
+</head>
+<body>
+    <!-- Включаем навигацию -->
+    <%- include('../partials/nav'); %>
+
+    <div class="admin-container">
+        <h1>Добро пожаловать, Администратор <%= user.name %>!</h1>
+
+        <div class="users-info">
+            <h2>Всего участников: <%= allUsers.length %></h2>
+        </div>
+
+        <div class="users-list">
+            <h2>Список пользователей:</h2>
+            <ul>
+                <% allUsers.forEach(function(u) { %>
+                    <li><strong>Имя:</strong> <%= u.name %> - <strong>Ключ:</strong> <%= u.uniqueKey %></li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div class="admin-actions">
+            <a href="/chat" class="btn">Перейти в общий чат</a>
+            <a href="/logout" class="btn logout">Выйти</a>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов через корневую папку /public -->
+    <script src="/js/adminDashboard.js"></script> <!-- Из папки public/js -->
+</body>
+</html>
+
+
+
+ 

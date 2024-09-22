@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навигация</title>
+
+    <!-- Подключение Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Подключение основного CSS -->
+    <link rel="stylesheet" href="/css/nav/nav-header.css">
+    <link rel="stylesheet" href="/css/nav/nav-bottom.css">
+    <link rel="stylesheet" href="/css/nav/nav-responsive.css">
+</head>
+<body>
+    <!-- Верхняя навигация для ПК и планшетов -->
+    <nav class="navbar">
+        <!-- Логотип слева -->
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" alt="CookHub Logo"></a>
+        </div>
+
+        <!-- Список навигации (две иконки по центру) -->
+        <ul class="nav-list center-nav">
+            <li><a href="/"><i class="bx bx-home"></i></a></li>
+            <li><a href="/search"><i class="bx bx-search"></i></a></li>
+        </ul>
+
+        <!-- Кнопки "Вход" и "Регистрация" в правом углу -->
+        <div class="auth-buttons">
+            <a href="/login" class="btn-auth"><i class="bx bx-log-in"></i></a>
+            <a href="/register" class="btn-auth"><i class="bx bx-user-plus"></i></a>
+        </div>
+    </nav>
+
+<!-- Навигация снизу для мобильных устройств -->
+<div class="navigation">
+    <ul>
+        <li class="list active" id="home-button">
+            <a href="/" aria-label="Home">
+                <i class="bx bx-home"></i>
+                <span class="text">Домой</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="/search" id="searchButton" aria-label="Search">
+                <i class="bx bx-search"></i>
+                <span class="text">Поиск</span>
+            </a>
+        </li>
+        <li class="list" id="post-button">
+            <a href="/post" aria-label="Post">
+                <i class="bx bx-pencil"></i>
+                <span class="text">Пост</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="/register" aria-label="Register">
+                <i class="bx bx-user-plus"></i>
+                <span class="text">Регистрация</span>
+            </a>
+        </li>
+        <li class="list">
+            <a href="/login" aria-label="Login">
+                <i class="bx bx-log-in"></i>
+                <span class="text">Вход</span>
+            </a>
+        </li>
+    </ul>
+    <div class="indicator"></div>
+</div>
+
+    <!-- Подключение JavaScript -->
+    <script src="/js/nav.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/nav/nav-header.css">
+    <link rel="stylesheet" href="/css/nav/nav-bottom.css">
+    <link rel="stylesheet" href="/css/nav/nav-responsive.css">
+</head>
+<body>
+    <!-- Включаем навигацию -->
+    <%- include('../partials/nav'); %>
+
+    <div class="chat-container">
+        <h1>Комната чата</h1>
+
+        <!-- Лента сообщений -->
+        <ul id="messages" class="chat-feed"></ul>
+
+        <!-- Ввод нового сообщения -->
+        <div class="chat-input">
+            <input type="text" id="message" placeholder="Введите сообщение">
+            <button onclick="sendMessage()" class="btn">Отправить</button>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="/js/chat.js"></script>
+</body>
+</html>
+
+
